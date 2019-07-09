@@ -3,3 +3,9 @@
 <p align ="center">
 <img src="img/AlBERTo.png" width="250"/>
 </p>
+## Pre-trained model download:
+The pre-trained <i>lower cased</i> model on a vocabulary of 128k terms can be downloaded here:
+and can be downloaded here:
+
+*   **[`AlBERTo-Base, Italian Twitter lower cased`](...)**:
+    Italian language of social media, 12-layer, 768-hidden, 12-heads, 110M parameters
