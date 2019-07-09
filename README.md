@@ -3,7 +3,9 @@
 <p align ="center">
 <img src="img/AlBERTo.png" width="250"/>
 </p>
-## Pre-trained model download:
+
+<h2>Pre-trained model download</h2>
+
 The pre-trained <i>lower cased</i> model on a vocabulary of 128k terms can be downloaded here:
 and can be downloaded here:
 
