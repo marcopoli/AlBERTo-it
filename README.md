@@ -17,3 +17,9 @@ In order to use the model and run the example "as it is" you need to store AlBER
 
 *   **[`Fine-Tuning and Classification Task`](AlBERTo_End_to_End_(Fine_tuning_+_Predicting)_with_Cloud_TPU_Sentence_Classification_Tasks.ipynb)**:
     Jupyther notebook used for fine-tuning AlBERTo on the SENTIPOLC 2016 NLP tasks (http://www.di.unito.it/~tutreeb/sentipolc-evalita16/)
+
+<h2>Credits</h2>
+Authors: Marco Polignano, Pierpaolo basile, Marco de Gemmis, Giovanni Semeraro, Valerio Basile
+
+<b>Cite us:</b>
+TBD
