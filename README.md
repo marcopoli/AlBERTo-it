@@ -19,7 +19,7 @@ In order to use the model and run the example "as it is" you need to store AlBER
     Jupyther notebook used for fine-tuning AlBERTo on the SENTIPOLC 2016 NLP tasks (http://www.di.unito.it/~tutreeb/sentipolc-evalita16/)
 
 <h2>Credits</h2>
-<b>Authors<b>:<br> Marco Polignano, Pierpaolo Basile, Marco de Gemmis, Giovanni Semeraro, Valerio Basile
+<b>Authors</b>:<br> Marco Polignano, Pierpaolo Basile, Marco de Gemmis, Giovanni Semeraro, Valerio Basile
 
 <br><br><b>Cite us:</b>
 TBD
