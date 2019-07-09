@@ -6,8 +6,7 @@
 
 <h2>Pre-trained model download</h2>
 
-The pre-trained <i>lower cased</i> model on a vocabulary of 128k terms can be downloaded here:
-and can be downloaded here:
+The pre-trained <i>lower cased</i> model on a vocabulary of 128k terms from 200M of tweets can be downloaded here:
 
 *   **[`AlBERTo-Base, Italian Twitter lower cased`](...)**:
     Italian language of social media, 12-layer, 768-hidden, 12-heads, 110M parameters
