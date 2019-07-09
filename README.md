@@ -13,7 +13,7 @@ The pre-trained <i>lower cased</i> model on a vocabulary of 128k terms from 200M
 
 <h2>Example of usage</h2>
 In order to use the model and run the example "as it is" you need to store AlBERTo in your GCS bucket (https://cloud.google.com/products/storage/). The example is writter to be run on the Google Colab Platform.
-
+<br><br>
 
 *   **[`Fine-Tuning and Classification Task`](AlBERTo_End_to_End_(Fine_tuning_+_Predicting)_with_Cloud_TPU_Sentence_Classification_Tasks.ipynb)**:
     Jupyther notebook used for fine-tuning AlBERTo on the SENTIPOLC 2016 NLP tasks (http://www.di.unito.it/~tutreeb/sentipolc-evalita16/)
