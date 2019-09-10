@@ -22,7 +22,7 @@ In order to use the model and run the example "as it is" you need to store AlBER
 <b>Authors</b>:<br> Marco Polignano, Pierpaolo Basile, Marco de Gemmis, Giovanni Semeraro, Valerio Basile
 
 <br><br><b>Cite us:</b>
-
+'''
 @InProceedings{PolignanoEtAlCLIC2019,
   author    = {Marco Polignano and Pierpaolo Basile and Marco de Gemmis and Giovanni Semeraro and Valerio Basile},
   title     = {{AlBERTo: Italian BERT Language Understanding Model for NLP Challenging Tasks Based on Tweets}},
@@ -30,3 +30,4 @@ In order to use the model and run the example "as it is" you need to store AlBER
   year      = {2019},
   publisher = {CEUR}
 }
+'''
