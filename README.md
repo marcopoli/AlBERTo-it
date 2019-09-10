@@ -25,7 +25,7 @@ In order to use the model and run the example "as it is" you need to store AlBER
 ```
 @InProceedings{PolignanoEtAlCLIC2019,
   author    = {Marco Polignano and Pierpaolo Basile and Marco de Gemmis and Giovanni Semeraro and Valerio Basile},
-  title     = {{AlBERTo: Italian BERT Language Understanding Model for NLP Challenging Tasks Based on Tweets}},
+  title     = {AlBERTo: Italian BERT Language Understanding Model for NLP Challenging Tasks Based on Tweets},
   booktitle = {Proceedings of the Sixth Italian Conference on Computational Linguistics (CLiC-it 2019)},
   year      = {2019},
   publisher = {CEUR}
