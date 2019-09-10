@@ -8,9 +8,8 @@
 
 The pre-trained <i>lower cased</i> model on a vocabulary of 128k terms from 200M of tweets can be downloaded here:
 
-*   **[`AlBERTo-Base, Italian Twitter lower cased`](...)**:
-    Italian language of social media, 12-layer, 768-hidden, 12-heads, 110M parameters:
-    <br><a href="https://storage.googleapis.com/albert_files/alberto_tweets_uncased_L-12_H-768_A-12.zip">alberto_tweets_uncased_L-12_H-768_A-12.zip</a>
+*   **[`AlBERTo-Base, Italian Twitter lower cased`](https://storage.googleapis.com/albert_files/alberto_tweets_uncased_L-12_H-768_A-12.zip)**:
+    Italian language of social media, 12-layer, 768-hidden, 12-heads, 110M parameters
 
 <h2>Example of usage</h2>
 In order to use the model and run the example "as it is" you need to store AlBERTo in your GCS bucket (https://cloud.google.com/products/storage/). The example is writter to be run on the Google Colab Platform.
