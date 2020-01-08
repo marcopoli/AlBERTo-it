@@ -27,9 +27,14 @@ In order to use the model and run the example "as it is" you need to store AlBER
 ```
 @InProceedings{PolignanoEtAlCLIC2019,
   author    = {Marco Polignano and Pierpaolo Basile and Marco de Gemmis and Giovanni Semeraro and Valerio Basile},
-  title     = {AlBERTo: Italian BERT Language Understanding Model for NLP Challenging Tasks Based on Tweets},
+  title     = {{AlBERTo: Italian BERT Language Understanding Model for NLP Challenging Tasks Based on Tweets}},
   booktitle = {Proceedings of the Sixth Italian Conference on Computational Linguistics (CLiC-it 2019)},
   year      = {2019},
-  publisher = {CEUR}
+  publisher = {CEUR},
+  journal={CEUR Workshop Proceedings},
+  volume={2481},
+  url={https://www.scopus.com/inward/record.uri?eid=2-s2.0-85074851349&partnerID=40&md5=7abed946e06f76b3825ae5e294ffac14},
+  document_type={Conference Paper},
+  source={Scopus}
 }
 ```
