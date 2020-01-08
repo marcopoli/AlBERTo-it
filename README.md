@@ -25,7 +25,7 @@ In order to use the model and run the example "as it is" you need to store AlBER
 
 <h3>HuggingFace.co Transformers</h3>
 
-```
+```python
 from tokenizer import *
 from transformers import AutoTokenizer, AutoModel
 
