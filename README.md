@@ -23,7 +23,7 @@ In order to use the model and run the example "as it is" you need to store AlBER
 *   **[`Fine-Tuning and Classification Task`](AlBERTo_End_to_End_(Fine_tuning_+_Predicting)_with_Cloud_TPU_Sentence_Classification_Tasks.ipynb)**:
     Jupyther notebook used for fine-tuning AlBERTo on the SENTIPOLC 2016 NLP tasks (http://www.di.unito.it/~tutreeb/sentipolc-evalita16/)
 
-<h3>HuggingFace.co Transformers</h3>
+<h3>Huggingface.co Transformers <img src="https://huggingface.co/front/assets/huggingface_logo.svg" width="20"></h3>
 
 ```python
 from tokenizer import *
