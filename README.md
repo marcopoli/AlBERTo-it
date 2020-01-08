@@ -22,7 +22,23 @@ In order to use the model and run the example "as it is" you need to store AlBER
 
 *   **[`Fine-Tuning and Classification Task`](AlBERTo_End_to_End_(Fine_tuning_+_Predicting)_with_Cloud_TPU_Sentence_Classification_Tasks.ipynb)**:
     Jupyther notebook used for fine-tuning AlBERTo on the SENTIPOLC 2016 NLP tasks (http://www.di.unito.it/~tutreeb/sentipolc-evalita16/)
- 
+
+<h3>HuggingFace.co Transformers</h3>
+```python
+from tokenizer import *
+from transformers import AutoTokenizer, AutoModel
+
+a = AlBERTo_Preprocessing(do_lower_case=True)
+s: str = "#IlGOverno presenta le linee guida sulla scuola #labuonascuola - http://t.co/SYS1T9QmQN"
+b = a.preprocess(s)
+
+tok = AutoTokenizer.from_pretrained("m-polignano-uniba/bert_uncased_L-12_H-768_A-12_italian_alb3rt0")
+tokens = tok.tokenize(b)
+print(tokens)
+
+model = AutoModel.from_pretrained("m-polignano-uniba/bert_uncased_L-12_H-768_A-12_italian_alb3rt0")
+```
+
 <h2>Credits</h2>
 <b>Authors</b>:<br> Marco Polignano, Pierpaolo Basile, Marco de Gemmis, Giovanni Semeraro, Valerio Basile
 
