@@ -60,8 +60,6 @@ except ImportError:
     from transformers import BertTokenizer, WordpieceTokenizer
     from transformers.tokenization_bert import load_vocab
 
-
-logger = logging.getLogger(__name__)
 text_processor = TextPreProcessor(
     # terms that will be normalized
     normalize=['url', 'email', 'user', 'percent', 'money', 'phone', 'time', 'date', 'number'],
@@ -77,26 +75,38 @@ text_processor = TextPreProcessor(
     dicts=[emoticons]
 )
 
-class AlBERToTokenizer(object):
+class AlBERTo_Preprocessing(object):
+    def __init__(self, do_lower_case=True, **kwargs):
+        self.do_lower_case = do_lower_case
 
-    def __init__(self, vocab_file, do_lower_case=False,
-                 do_basic_tokenize=True, do_char_tokenize=False, do_wordpiece_tokenize=False, unk_token='[UNK]',
+    def preprocess(self, text):
+        if self.do_lower_case:
+            text = text.lower()
+        text = str(" ".join(text_processor.pre_process_doc(text)))
+        text = re.sub(r'[^a-zA-ZÀ-ú</>!?♥♡\s\U00010000-\U0010ffff]', ' ', text)
+        text = re.sub(r'\s+', ' ', text)
+        text = re.sub(r'(\w)\1{2,}', r'\1\1', text)
+        text = re.sub(r'^\s', '', text)
+        text = re.sub(r'\s$', '', text)
+        return text
+
+class AlBERToTokenizer(BertTokenizer):
+
+    def __init__(self, vocab_file, do_lower_case=True,
+                 do_basic_tokenize=True, do_char_tokenize=False, do_wordpiece_tokenize=False, do_preprocessing = True, unk_token='[UNK]',
                  sep_token='[SEP]',
-                 pad_token='[PAD]', cls_token='[CLS]', mask_token='[MASK]', all_special_tokens=[], **kwargs):
+                 pad_token='[PAD]', cls_token='[CLS]', mask_token='[MASK]', **kwargs):
         super(BertTokenizer, self).__init__(
             unk_token=unk_token, sep_token=sep_token, pad_token=pad_token,
             cls_token=cls_token, mask_token=mask_token, **kwargs)
 
-        self.max_len_single_sentence = self.max_len - 2  # take into account special tokens
-        self.max_len_sentences_pair = self.max_len - 3  # take into account special tokens
-
-        self.all_special_tokens = all_special_tokens
         self.do_wordpiece_tokenize = do_wordpiece_tokenize
         self.do_lower_case = do_lower_case
         self.vocab_file = vocab_file
         self.do_basic_tokenize = do_basic_tokenize
         self.do_char_tokenize = do_char_tokenize
         self.unk_token = unk_token
+        self.do_preprocessing = do_preprocessing
 
         if not os.path.isfile(vocab_file):
             raise ValueError(
@@ -121,28 +131,38 @@ class AlBERToTokenizer(object):
 
         return self.vocab.get(token, self.vocab.get(self.unk_token))
 
+    def convert_token_to_id(self, token):
+        return self._convert_token_to_id(token)
+
+        return self.vocab.get(token, self.vocab.get(self.unk_token))
+
     def _convert_id_to_token(self, id):
         # if token[:2] == '##':
         #     token = token[2:]
 
         return list(self.vocab.keys())[int(id)]
+    def convert_id_to_token(self, id):
+        return self._convert_id_to_token(id)
 
-    def convert_tokens_to_string(tokens):
+    def _convert_tokens_to_string(self,tokens):
         """Converts a sequence of tokens (string) to a single string."""
         out_string = ' '.join(tokens).replace('##', '').strip()
         return out_string
 
-    def _tokenize(self, text, never_split=None, **kwargs):
+    def convert_tokens_to_string(self,tokens):
+        return self._convert_tokens_to_string(tokens)
 
-        if self.do_lower_case:
-            text = text.lower()
-        text = str(" ".join(text_processor.pre_process_doc(text)))
-        text = re.sub(r'[^a-zA-ZÀ-ú</>!?♥♡\s\U00010000-\U0010ffff]', ' ', text)
-        text = re.sub(r'\s+', ' ', text)
-        text = re.sub(r'(\w)\1{2,}', r'\1\1', text)
-        text = re.sub(r'^\s', '', text)
-        text = re.sub(r'\s$', '', text)
-        # print(s)
+    def _tokenize(self, text, never_split=None, **kwargs):
+        if self.do_preprocessing:
+            if self.do_lower_case:
+                text = text.lower()
+            text = str(" ".join(text_processor.pre_process_doc(text)))
+            text = re.sub(r'[^a-zA-ZÀ-ú</>!?♥♡\s\U00010000-\U0010ffff]', ' ', text)
+            text = re.sub(r'\s+', ' ', text)
+            text = re.sub(r'(\w)\1{2,}', r'\1\1', text)
+            text = re.sub(r'^\s', '', text)
+            text = re.sub(r'\s$', '', text)
+            # print(s)
 
         split_tokens = [text]
         if self.do_wordpiece_tokenize:
@@ -158,6 +178,10 @@ class AlBERToTokenizer(object):
             split_tokens = self.base_bert_tok.tokenize(text)
 
         return split_tokens
+
+    def tokenize(self, text, never_split=None, **kwargs):
+        return self._tokenize(text, never_split)
+
 
 class CharacterTokenizer(object):
     """Runs Character tokenziation."""
@@ -203,4 +227,12 @@ class CharacterTokenizer(object):
 
         return output_tokens
 
+if __name__== "__main__":
+    a = AlBERTo_Preprocessing(do_lower_case=True)
+    s = "#IlGOverno presenta le linee guida sulla scuola #labuonascuola - http://t.co/SYS1T9QmQN"
+    b = a.preprocess(s)
+    print(b)
 
+    c =AlBERToTokenizer(do_lower_case=True,vocab_file="vocab.txt", do_preprocessing=True)
+    d = c.tokenize(s)
+    print(d)
