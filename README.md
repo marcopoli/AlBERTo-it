@@ -24,7 +24,8 @@ In order to use the model and run the example "as it is" you need to store AlBER
     Jupyther notebook used for fine-tuning AlBERTo on the SENTIPOLC 2016 NLP tasks (http://www.di.unito.it/~tutreeb/sentipolc-evalita16/)
 
 <h3>HuggingFace.co Transformers</h3>
-```python
+
+```
 from tokenizer import *
 from transformers import AutoTokenizer, AutoModel
 
