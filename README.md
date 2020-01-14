@@ -45,6 +45,7 @@ model = AutoModel.from_pretrained("m-polignano-uniba/bert_uncased_L-12_H-768_A-1
 <h2>Credits</h2>
 <b>Authors</b>:<br> Marco Polignano, Pierpaolo Basile, Marco de Gemmis, Giovanni Semeraro, Valerio Basile
 
+Thanks to Angelo Basile, Junior Research Scientist at Symanto - Profiling AI for the huggingface models.
 <br><br><b>Cite us:</b>
 ```
 @InProceedings{PolignanoEtAlCLIC2019,
