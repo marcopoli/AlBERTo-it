@@ -25,7 +25,7 @@ In order to use the model and run the example "as it is" you need to store AlBER
 *   **[`Fine-Tuning and Classification Task`](AlBERTo_End_to_End_(Fine_tuning_+_Predicting)_with_Cloud_TPU_Sentence_Classification_Tasks.ipynb)**:
     Jupyther notebook used for fine-tuning AlBERTo on the SENTIPOLC 2016 NLP tasks (http://www.di.unito.it/~tutreeb/sentipolc-evalita16/)
 *   **[`Sentipolc 2016`]
-(Tensorflow pretrained models)**: https://drive.google.com/open?id=1fODwLwtyKeayk290Tn7s-0-w63Hb-EYL
+(Tensorflow pretrained models)**:  https://drive.google.com/open?id=1fODwLwtyKeayk290Tn7s-0-w63Hb-EYL
 
 <h3>Huggingface.co Transformers <img src="https://huggingface.co/front/assets/huggingface_logo.svg" width="20"></h3>
 
