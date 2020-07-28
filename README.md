@@ -1,4 +1,5 @@
-# 10/09/2019 - Model released
+# 28/07/2020 - Model V0.0.2 released Tweets 2018 & 2019
+# Coming soon - General purposes model released
 
 # AlBERTo the first italian BERT model for Twitter languange understanding
 <p align ="justify" style="text-align: justify;">Recent scientific studies on natural language processing (NLP) report the outstanding effectiveness observed in the use of context-dependent and task-free language understanding models such as ELMo, GPT, and BERT. Specifically, they have proved to achieve state of the art performance in numerous complex NLP tasks such as question answering and sentiment analysis in the English language. Following the great popularity and effectiveness that these models are gaining in the scientific community, we trained a BERT language understanding model for the Italian language (<b>AlBERTo</b>). In particular, AlBERTo is focused on the language used in social networks, specifically on Twitter. To demonstrate its robustness, we evaluated AlBERTo on the EVALITA 2016 task SENTIPOLC (SENTIment POLarity Classification) obtaining state of the art results in subjectivity, polarity and irony detection on Italian tweets. The pre-trained  AlBERTo model will be publicly distributed through the GitHub platform at the following web address: https://github.com/marcopoli/AlBERTo-it in order to facilitate future research.</p>
@@ -13,9 +14,11 @@ http://ceur-ws.org/Vol-2481/paper57.pdf
 The pre-trained <i>lower cased</i> model on a vocabulary of 128k terms from 200M of tweets can be downloaded here:
 
 *   **[`AlBERTo-Base, Italian Twitter lower cased`](https://drive.google.com/open?id=15pa20vLqmZDXERbcO73M5GsN0Zo8ittF)**:
-    Italian language of social media, 12-layer, 768-hidden, 12-heads, 110M parameters
-*   **[`AlBERTo-Base, Italian Twitter lower cased` - Pytorch and Tensorflow Models](https://drive.google.com/open?id=1x1pRE7LZilIcPSWgoNpGyci9NwPqZYiL)**:
+    Italian language of social media, 12-layer, 768-hidden, 12-heads, 110M parameters, tensorflow model, tweets 2012-2015
+*   **[`AlBERTo-Base, Italian Twitter lower cased` - Pytorch Models](https://drive.google.com/open?id=1x1pRE7LZilIcPSWgoNpGyci9NwPqZYiL)**:
     Italian language of social media, 12-layer, 768-hidden, 12-heads, 110M parameters, compatible with Transformers, thanks to Angelo Basile, Junior Research Scientist at Symanto - Profiling AI
+*   **[`AlBERTo-Base, Italian Twitter lower cased` - V0.0.2 - Tweets 2018 & 2019](https://drive.google.com/file/d/1jgqk7kZUbs_3ghcUXgDWIKWGk_hdig04/view?usp=sharing)**:
+    Italian language of social media, 12-layer, 768-hidden, 12-heads, 110M parameters, tensorflow model, tweets 2018-2019
     
 
 <h2>Example of usage</h2>
